@@ -1,0 +1,183 @@
+/* VINTAGE CARNIVAL — LIODEN DEN CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap');
+
+html,
+body {
+    background: url('https://i.pinimg.com/736x/ab/55/14/ab5514deb213953cb4c4f694f4208880.jpg')
+        center center / cover fixed no-repeat !important;
+    background-color: #210100 !important;
+}
+
+.container,
+#container,
+#page,
+.main,
+.content {
+    background-color: transparent !important;
+}
+
+.carnival-den {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 5%;
+    box-sizing: border-box;
+    background: rgba(33, 1, 0, 0.78);
+    border-left: 3px solid #E6A341;
+    border-right: 3px solid #E6A341;
+    box-shadow: 0 0 30px rgba(0,0,0,.7), inset 0 0 40px rgba(140,9,2,.25);
+    font-family: Georgia, serif;
+    color: #FECE79;
+}
+
+.carnival-header {
+    text-align: center;
+    padding: 20px 10px 25px;
+    margin-bottom: 25px;
+    border-top: 1px solid #B14A36;
+    border-bottom: 2px solid #E6A341;
+}
+
+.carnival-header h1,
+.carnival-box h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #FECE79;
+    text-shadow: 2px 2px 0 #210100;
+}
+
+.carnival-header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.carnival-header p {
+    color: #E6A341;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 6px 0;
+}
+
+.carnival-divider {
+    text-align: center;
+    color: #E6A341;
+    margin: 12px 0;
+}
+
+.carnival-divider::before {
+    content: "─────── ✦ ───────";
+}
+
+.carnival-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.carnival-box {
+    box-sizing: border-box;
+    background: linear-gradient(rgba(140,9,2,.92), rgba(92,5,1,.96));
+    border: 2px solid #E6A341;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.45), inset 0 0 20px rgba(33,1,0,.65);
+    position: relative;
+}
+
+.carnival-box::before,
+.carnival-box::after {
+    content: "✦";
+    position: absolute;
+    color: #E6A341;
+    font-size: 13px;
+}
+
+.carnival-box::before { top: 7px; left: 9px; }
+.carnival-box::after { bottom: 7px; right: 9px; }
+
+.carnival-box h3 {
+    font-size: 21px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B14A36;
+}
+
+.carnival-scroll {
+    color: #FECE79;
+    font-size: 14px;
+    line-height: 1.7;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.carnival-scroll p {
+    margin: 6px 0 12px;
+}
+
+.carnival-scroll strong {
+    color: #E6A341;
+}
+
+.carnival-scroll ul {
+    padding-left: 20px;
+}
+
+.carnival-scroll li {
+    margin-bottom: 5px;
+}
+
+.carnival-den a {
+    color: #FECE79;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted #E6A341;
+}
+
+.carnival-den a:hover {
+    color: #FFFFFF;
+}
+
+.carnival-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carnival-scroll::-webkit-scrollbar-track {
+    background: #210100;
+}
+
+.carnival-scroll::-webkit-scrollbar-thumb {
+    background: #E6A341;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    .carnival-den {
+        padding: 25px 12px;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .carnival-header h1 {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .carnival-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .carnival-box {
+        padding: 17px;
+    }
+
+    .carnival-scroll {
+        max-height: 230px;
+    }
+}
